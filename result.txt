@@ -1,0 +1,90 @@
+--- Test Correctness ---
+
+case for: Hello Friend!
+cut paste operation is correct: true
+copy paste operation is correct: true
+getText operation is correct: true
+misspellings operation is correct: true
+
+case for: ABCDEDG
+cut paste operation is correct: true
+copy paste operation is correct: true
+getText operation is correct: true
+misspellings operation is correct: true
+
+case for:  1 23AAD J
+cut paste operation is correct: true
+copy paste operation is correct: true
+getText operation is correct: true
+misspellings operation is correct: true
+
+case for: Neeva is awesome!
+cut paste operation is correct: true
+copy paste operation is correct: true
+getText operation is correct: true
+misspellings operation is correct: true
+
+--- Test Basic Operation Speed ---
+<case for SMALL document:>
+
+ Text Editor with Gap Buffer Implementation: 
+100 cut paste operations takes: 0.718694 ms
+100 copy paste operations takes: 2.948668 ms
+100 getText operations takes: 3.007466 ms
+100 misspellings operations takes: 3.067161 ms
+
+ Text Editor with Brute Force Implementation: 
+100 cut paste operations takes: 0.192958 ms
+100 copy paste operations takes: 0.335103 ms
+100 getText operations takes: 0.375858 ms
+100 misspellings operations takes: 6.017017 ms
+
+<case for LARGE document:>
+
+ Text Editor with Gap Buffer Implementation: 
+100 cut paste operations takes: 11.213449 ms
+100 copy paste operations takes: 11.418709 ms
+100 getText operations takes: 12.276561 ms
+100 misspellings operations takes: 12.33317 ms
+
+ Text Editor with Brute Force Implementation: 
+100 cut paste operations takes: 172.440065 ms
+100 copy paste operations takes: 227.520606 ms
+100 getText operations takes: 227.64254 ms
+100 misspellings operations takes: 924.220376 ms
+
+--- Test Random Operations (All operation has the same possibility to be chosen) On a Large File ---
+
+ Text Editor with Gap Buffer Implementation: 
+100 random operations take 229.752319 ms
+10000 random operations take 84.557097 ms
+
+ Text Editor with Brute Force Implementation: 
+100 random operations take 86.712065 ms
+10000 random operations take 186.598834 ms
+
+--- Test Random Operations (Heavy Read and Check) On a Large File ---
+
+ Text Editor with Gap Buffer Implementation: 
+100 random operations take 30.133301 ms
+10000 random operations take 70.175822 ms
+
+ Text Editor with Brute Force Implementation: 
+100 random operations take 226.380038 ms
+10000 random operations take 142.751023 ms
+
+--- Test Random Operations (Heavy Modify Operations) On a Large File ---
+
+ Text Editor with Gap Buffer Implementation: 
+100 random operations take 169.660247 ms
+10000 random operations take 144.461756 ms
+
+ Text Editor with Brute Force Implementation: 
+100 random operations take 634.336289 ms
+10000 random operations take 45.954447 ms
+
+--- Test Corner Cases ---
+
+cornor case 1: SUCCESS
+
+Process finished with exit code 0
